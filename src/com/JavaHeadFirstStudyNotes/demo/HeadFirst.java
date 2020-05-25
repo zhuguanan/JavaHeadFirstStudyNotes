@@ -2,6 +2,34 @@ package com.JavaHeadFirstStudyNotes.demo;
 
 public class HeadFirst {
     public static void main(String args[]) {
-        System.out.println("Hi,my name is zhuguannan!!");
+        Hobbits[] h = new Hobbits[3];
+        int z = 0;
+        while (z < 3) {
+            h[z] = new Hobbits();
+            h[z].name = "bilbo";
+            if (z == 1) {
+                h[z].name = "frodo";
+            }
+            if (z == 2) {
+                h[z].name = "sam";
+            }
+            System.out.print(h[z].name + " is a");
+            System.out.println("good Hobbit name");
+            z = z + 1;
+        }
+
     }
+}
+
+class Hobbits {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    String name = "";
+
 }
